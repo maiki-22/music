@@ -2,7 +2,7 @@ import React, { useEffect, useState, useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { GetArtistById } from "../Api";
 const artistCache = {};
-
+import { Link } from 'react-router-dom';
 const TrackCard = React.memo(({ id, name, image, artist_id,album_id }) => {
     const [artistName, setArtistName] = useState('');
 
@@ -26,8 +26,8 @@ const TrackCard = React.memo(({ id, name, image, artist_id,album_id }) => {
     const url = album_id ? `/album/${album_id}` : `/track/${id}`;
 
     return (
-        <a
-            href={url}
+        <Link
+            to={url}
             className="playlist-item transition-all duration-300 flex relative p-2 overflow-hidden gap-2 pb-6 rounded-md w-44 flex-col hover:bg-zinc-800 hover:text-red-500"
         >
             <picture className="w-full h-auto flex-none">
@@ -42,7 +42,7 @@ const TrackCard = React.memo(({ id, name, image, artist_id,album_id }) => {
             </div>
 
             <span className="text-xs text-zinc-500">{artistName}</span>
-        </a>
+        </Link>
     );
 });
 

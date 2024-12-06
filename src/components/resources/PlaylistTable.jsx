@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { GetPlaylistTracks, GetAlbumById } from "../Api";
-
+import { Link } from "react-router-dom";
 export const PlaylistTable = ({ id }) => {
     const [tracks, setTracks] = useState([]);
     const [album, setAlbums] = useState({});
@@ -59,19 +59,19 @@ export const PlaylistTable = ({ id }) => {
                             </td>
                             <td className="px-4 py-2">
                                 {track.album_id ? (
-                                    <a
-                                        href={`/album/${track.album_id}`}
+                                    <Link
+                                        to={`/album/${track.album_id}`}
                                         className="text-zinc-600 hover:underline hover:text-red-500"
                                     >
                                         {album.title}
-                                    </a>
+                                    </Link>
                                 ) : (
-                                    <a
-                                        href={`/track/${track.id}`}
+                                    <Link
+                                        to={`/track/${track.id}`}
                                         className="text-zinc-600 hover:underline hover:text-red-500"
                                     >
                                         {track.title}
-                                    </a>
+                                    </Link>
                                 )}
                             </td>
                         </tr>

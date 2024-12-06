@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 const PlaylistCardSearch = React.memo(({ id, name, image }) => {
 
     return (
-        <a
-            href={`/album/${id}`}
+        <Link
+            to={`/album/${id}`}
             className="playlist-item transition-all duration-300 flex relative p-2 overflow-hidden gap-2 pb-6 rounded-md w-44 flex-col hover:bg-zinc-800 hover:text-red-500"
         >
             <picture className="w-full h-auto flex-none">
@@ -19,7 +19,7 @@ const PlaylistCardSearch = React.memo(({ id, name, image }) => {
                 <h4 className="font-semibold">{name}</h4>
             </div>
 
-        </a>
+        </Link>
     );
 });
 

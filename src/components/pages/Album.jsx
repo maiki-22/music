@@ -6,6 +6,7 @@ import Loader from "../resources/Loader";
 import { AlbumTrackTable } from "../resources/AlbumTrackTable";
 import ButtonEdit from "../resources/ButtonEdit";
 import ButtonDelete from "../resources/ButtonDelete";
+import { Link } from "react-router-dom";
 export function Album() {
     const { id } = useParams();
     const [album, setAlbums] = useState(null);
@@ -76,12 +77,12 @@ export function Album() {
                                 className="object-cover w-full h-full rounded-full"
                             />
                         </picture>
-                        <a
-                        href={`/artist/${artist?.id}`}
+                        <Link
+                        to={`/artist/${artist?.id}`}
                         ><h2
                         className="font-medium hover:underline hover:text-red-500"
                         >
-                            {artist?.name}</h2></a>
+                            {artist?.name}</h2></Link>
                         <h2
                         className="text-white/60 font-medium"
                         >

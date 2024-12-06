@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { GetArtistById } from "../Api";
+import { Link } from 'react-router-dom';
 
 const AlbumCard = React.memo(({ id, name, image, artist_id }) => {
     const [artistName, setArtistName] = useState('');
@@ -20,8 +21,8 @@ const AlbumCard = React.memo(({ id, name, image, artist_id }) => {
     }, [artist_id]);
 
     return (
-        <a
-            href={`/album/${id}`}
+        <Link
+            to={`/album/${id}`}
             className="playlist-item transition-all duration-300 flex relative p-2 overflow-hidden gap-2 pb-6 rounded-md w-44 flex-col hover:bg-zinc-800 hover:text-red-500"
         >
             <picture className="w-full h-auto flex-none">
@@ -37,7 +38,7 @@ const AlbumCard = React.memo(({ id, name, image, artist_id }) => {
             </div>
 
             <span className="text-xs text-zinc-500">{artistName || ''}</span>
-        </a>
+        </Link>
     );
 });
 
