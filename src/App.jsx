@@ -32,7 +32,7 @@ function App() {
 
         <main className='main rounded-lg overflow-y-auto'>
           <Routes>
-            <Route path="music/" element={<Home />} />
+            <Route path="/music" element={<Home />} />
             <Route path="music/artist/:id" element={<Artist />} />
             <Route path="music/album/:id" element={<Album />} />
             <Route path="music/track/:id" element={<Track />} />

@@ -7,7 +7,7 @@ const isHomePage = window.location.pathname === "/";
 return (
     <>
         <a
-            href="music/"
+            href="/music"
             className="rounded-full hover:text-red-500 bg-zinc-900 size-12 flex items-center justify-center cursor-pointer hover:scale-110 transition duration-300"
         >
             {isHomePage ? <HomeIconIn /> : <HomeIconOut />}
