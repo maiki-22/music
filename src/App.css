@@ -1,0 +1,37 @@
+
+
+#app {
+	  display: grid;
+	  grid-template-areas:
+	  'nav nav nav'
+	  'aside main main';
+	  grid-template-columns: 0.2fr 1fr;
+	  grid-template-rows: 0.04fr auto;
+}
+
+.filter.blur-sm {
+    filter: blur(4px);
+}
+
+.grid-container {
+    display: grid;
+
+
+
+    grid-template-areas:
+    'nav nav nav'
+    'aside main main';
+    .nav {
+        grid-area: nav;
+    }
+    .aside {
+        grid-area: aside;
+    }
+
+    .main {
+        grid-area: main;
+    }
+
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.04fr auto;
+}
