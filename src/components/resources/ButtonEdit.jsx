@@ -4,7 +4,7 @@ import { EditIcon } from './Icons';
 
 const ButtonEdit = ({ id, type }) => {
     return (
-        <Link to={`/edit/${type}/${id}`}>
+        <Link to={`music/edit/${type}/${id}`}>
             <EditIcon />
         </Link>
     );

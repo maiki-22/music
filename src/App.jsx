@@ -32,20 +32,20 @@ function App() {
 
         <main className='main rounded-lg overflow-y-auto'>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/artist/:id" element={<Artist />} />
-            <Route path="/album/:id" element={<Album />} />
-            <Route path="/track/:id" element={<Track />} />
-            <Route path="/search" element={<SearchResults />} />
-            <Route path="/playlist/:id" element={<Playlist />} />
-            <Route path="/add-artist" element={<AddArtist />} />
-            <Route path="/add-album" element={<AddAlbum />} />
-            <Route path="/add-track" element={<AddTrack />} />
-            <Route path="/add-playlist" element={<AddPlaylist />} />
-            <Route path="/edit/artist/:id" element={<EditArtist />} />
-            <Route path="/edit/album/:id" element={<EditAlbum />} />
-            <Route path="/edit/track/:id" element={<EditTrack />} />
-            <Route path="/edit/playlist/:id" element={<EditPlaylist />} />
+            <Route path="music/" element={<Home />} />
+            <Route path="music/artist/:id" element={<Artist />} />
+            <Route path="music/album/:id" element={<Album />} />
+            <Route path="music/track/:id" element={<Track />} />
+            <Route path="music/search" element={<SearchResults />} />
+            <Route path="music/playlist/:id" element={<Playlist />} />
+            <Route path="music/add-artist" element={<AddArtist />} />
+            <Route path="music/add-album" element={<AddAlbum />} />
+            <Route path="music/add-track" element={<AddTrack />} />
+            <Route path="music/add-playlist" element={<AddPlaylist />} />
+            <Route path="music/edit/artist/:id" element={<EditArtist />} />
+            <Route path="music/edit/album/:id" element={<EditAlbum />} />
+            <Route path="music/edit/track/:id" element={<EditTrack />} />
+            <Route path="music/edit/playlist/:id" element={<EditPlaylist />} />
           </Routes>
         </main>
       </div>
