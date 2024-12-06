@@ -2,7 +2,7 @@ import { HomeIconIn, HomeIconOut, SearchIcon } from "./resources/Icons";
 import SearchBar from "./resources/SearchBar";
 export function Navbar() {
 
-const isHomePage = window.location.pathname === "/";
+const isHomePage = window.location.pathname === "/music";
 
 return (
     <>

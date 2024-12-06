@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PlaylistCard = React.memo(({ id, image, name }) => {
     return (
         <a
-            href={`music/playlist/${id}`}
+            href={`/music/playlist/${id}`}
             className="playlist-card flex text-zinc-600 relative p-2 overflow-hidden items-center gap-5 font-medium hover:text-red-500 hover:bg-zinc-800 transition duration-300 cursor-pointer rounded-lg"
         >
             <picture className="size-12 flex-none">
