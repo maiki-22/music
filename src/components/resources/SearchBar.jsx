@@ -21,7 +21,7 @@ export function SearchBar() {
     if (searchTerm.trim() === "") return;
     try {
       const response = await search(searchTerm);
-      navigate(`/music/search?query=${searchTerm}`, { state: { results: response } });
+      navigate(`/search?query=${searchTerm}`, { state: { results: response } });
     } catch (error) {
       console.error("Error fetching search results:", error);
     }
