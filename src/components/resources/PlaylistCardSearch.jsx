@@ -5,7 +5,7 @@ const PlaylistCardSearch = React.memo(({ id, name, image }) => {
 
     return (
         <a
-            href={`/music/album/${id}`}
+            href={`/album/${id}`}
             className="playlist-item transition-all duration-300 flex relative p-2 overflow-hidden gap-2 pb-6 rounded-md w-44 flex-col hover:bg-zinc-800 hover:text-red-500"
         >
             <picture className="w-full h-auto flex-none">

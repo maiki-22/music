@@ -23,7 +23,7 @@ const TrackCard = React.memo(({ id, name, image, artist_id,album_id }) => {
     }, [fetchArtistName]);
 
     
-    const url = album_id ? `/music/album/${album_id}` : `/music/track/${id}`;
+    const url = album_id ? `/album/${album_id}` : `/track/${id}`;
 
     return (
         <a
